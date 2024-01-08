@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/02/23 17:36:09.000.463,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/25 11:06:46.000.676,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 16:43:10.301,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 16:50:17.535,C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\view\uFrmPrincipal.pas=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 16:50:17.535,C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\view\uFrmPrincipal.dfm=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/03/06 16:50:37.827,C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\prjRestaurante.dproj=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/03/06 16:51:03.057,=C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 16:51:49.814,C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\classes\uValidaCPF.pas=C:\Users\zirok\OneDrive\Área de Trabalho\Restaurante\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 16:53:54.475,=C:\Users\zirok\OneDrive\Área de Trabalho\Semana2_Jian\Lista_de_Exercicios\Ex14_AvoreGeneologica\src\classes\uPessoa.pas</Transaction>
+    <Transaction>2021/03/06 16:54:05.995,C:\Users\zirok\OneDrive\Área de Trabalho\Semana2_Jian\Lista_de_Exercicios\Ex14_AvoreGeneologica\src\classes\uPessoa.pas=</Transaction>
+  </Transactions>
+</BorlandProject>
