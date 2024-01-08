@@ -1,0 +1,23 @@
+unit uCidade;
+
+interface
+
+  type
+  TCidade = class
+    private
+      FCodigo_IBGE: integer;
+      FUF         : string;
+      FIdCidade   : integer;
+      FCapital    : Byte;
+      FNome       : string;
+    public
+      property Codigo_IBGE: integer read FCodigo_IBGE write FCodigo_IBGE;
+      property UF         : string  read FUF          write FUF         ;
+      property IdCidade   : integer read FIdCidade    write FIdCidade   ;
+      property Capital    : Byte    read FCapital     write FCapital    ;
+      property Nome       : string  read FNome        write FNome       ;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,33 @@
+unit uCidade;
+
+interface
+
+  type
+  TCidade = class
+    private
+      FCodigo_IBGE: integer;
+      FUF         : string;
+      FIdCidade   : integer;
+      FCapital    : Byte;
+      FNome       : string;
+      function GetCapital: Byte;
+      function GetCodigo_IBGE: integer;
+      function GetIdCidade: integer;
+      function GetNome: string;
+      function GetUF: string;
+      procedure SetCapital(const Value: Byte);
+      procedure SetCodigo_IBGE(const Value: integer);
+      procedure SetIdCidade(const Value: integer);
+      procedure SetNome(const Value: string);
+      procedure SetUF(const Value: string);
+    public
+      property Codigo_IBGE: integer read GetCodigo_IBGE write SetCodigo_IBGE;
+      property UF         : string  read GetUF          write SetUF         ;
+      property IdCidade   : integer read GetIdCidade    write SetIdCidade   ;
+      property Capital    : Byte    read GetCapital     write SetCapital    ;
+      property Nome       : string  read GetNome        write SetNome       ;
+  end;
+
+implementation
+
+end.

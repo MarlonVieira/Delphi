@@ -1,0 +1,9 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 305
+  Width = 496
+  object FDQuery1: TFDQuery
+    Left = 192
+    Top = 136
+  end
+end

@@ -1,0 +1,85 @@
+unit uCidade;
+
+interface
+
+  type
+  TCidade = class
+    private
+      FCodigo_IBGE: integer;
+      FUF         : string;
+      FIdCidade   : integer;
+      FCapital    : Byte;
+      FNome       : string;
+      function GetCapital: Byte;
+      function GetCodigo_IBGE: integer;
+      function GetIdCidade: integer;
+      function GetNome: string;
+      function GetUF: string;
+      procedure SetCapital(const Value: Byte);
+      procedure SetCodigo_IBGE(const Value: integer);
+      procedure SetIdCidade(const Value: integer);
+      procedure SetNome(const Value: string);
+      procedure SetUF(const Value: string);
+    public
+      property Codigo_IBGE: integer read GetCodigo_IBGE write SetCodigo_IBGE;
+      property UF         : string  read GetUF          write SetUF         ;
+      property IdCidade   : integer read GetIdCidade    write SetIdCidade   ;
+      property Capital    : Byte    read GetCapital     write SetCapital    ;
+      property Nome       : string  read GetNome        write SetNome       ;
+  end;
+
+implementation
+
+{ TCidade }
+
+function TCidade.GetCapital: Byte;
+begin
+  Result := FCapital;
+end;
+
+function TCidade.GetCodigo_IBGE: integer;
+begin
+  Result := FCodigo_IBGE;
+end;
+
+function TCidade.GetIdCidade: integer;
+begin
+  Result := FIdCidade;
+end;
+
+function TCidade.GetNome: string;
+begin
+  Result := FNome;
+end;
+
+function TCidade.GetUF: string;
+begin
+  Result := FUF;
+end;
+
+procedure TCidade.SetCapital(const Value: Byte);
+begin
+  FCapital := Value;
+end;
+
+procedure TCidade.SetCodigo_IBGE(const Value: integer);
+begin
+  FCodigo_IBGE := Value;
+end;
+
+procedure TCidade.SetIdCidade(const Value: integer);
+begin
+  FIdCidade := Value;
+end;
+
+procedure TCidade.SetNome(const Value: string);
+begin
+  FNome := Value;
+end;
+
+procedure TCidade.SetUF(const Value: string);
+begin
+  FUF:= Value;
+end;
+
+end.

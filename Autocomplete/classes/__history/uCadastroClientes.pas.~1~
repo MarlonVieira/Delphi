@@ -1,0 +1,41 @@
+unit CadastroClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Mask;
+
+type
+  TForm2 = class(TForm)
+    gbDadosPesooais: TGroupBox;
+    gbEndereco: TGroupBox;
+    Panel1: TPanel;
+    btGravar: TButton;
+    btCancelar: TButton;
+    LabeledEdit1: TLabeledEdit;
+    lbEndereco: TLabeledEdit;
+    lbNumero: TLabeledEdit;
+    lbBairro: TLabeledEdit;
+    MaskEdit1: TMaskEdit;
+    Label1: TLabel;
+    lbComplemento: TLabeledEdit;
+    cbUF: TComboBox;
+    Label2: TLabel;
+    lbCidade: TLabeledEdit;
+    grCidade: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+end.

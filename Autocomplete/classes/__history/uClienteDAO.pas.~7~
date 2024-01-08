@@ -1,0 +1,38 @@
+unit uClienteDAO;
+
+interface
+
+uses uCliente, classes, DB, sysUtils, generics.defaults, generics.collections, dialogs, uDm;
+
+type
+  TClienteDAO = class
+    public
+    class function Inserir(tempCliente: TCliente): boolean;
+    class function ListarClientesPorNome(_Nome: string): TObjectList<TCliente>;
+  end;
+
+implementation
+
+var
+  ListaCliente: TObjectList<TCliente>;
+
+{ TClienteDAO }
+
+class function TClienteDAO.Inserir(tempCliente: TCliente): boolean;
+var
+  Sql: string;
+begin
+  try
+    Result := False;
+  except
+
+  end;
+end;
+
+class function TClienteDAO.ListarClientesPorNome(
+  _Nome: string): TObjectList<TCliente>;
+begin
+
+end;
+
+end.

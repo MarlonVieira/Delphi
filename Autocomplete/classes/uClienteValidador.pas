@@ -1,0 +1,35 @@
+unit uClienteValidador;
+
+interface
+
+uses uCliente, System.Classes, System.SysUtils;
+
+type
+  TClienteValidador = class
+    public
+    class function Validar(Cliente: TCliente): TStringList;
+  end;
+
+implementation
+
+{ TClienteValidador }
+
+class function TClienteValidador.Validar(Cliente: TCliente): TStringList;
+begin
+  Result := TStringList.Create;
+
+  if Cliente.Nome            = EmptyStr then
+    Result.Add('ERRO: Nome não foi informado!');
+  if Cliente.Bairro          = EmptyStr then
+    Result.Add('ERRO: Bairro não foi informado!');
+  if Cliente.UF              = EmptyStr then
+    Result.Add('ERRO: UF não foi informado!');
+  if Cliente.CEP             = EmptyStr then
+    Result.Add('ERRO: CEP não foi informado!');
+  if Cliente.Endereco        = EmptyStr then
+    Result.Add('ERRO: Endereco não foi informado!');
+  if Cliente.Cidade.IdCidade = 0 then
+    Result.Add('ERRO: Cidade não foi informado!');
+end;
+
+end.

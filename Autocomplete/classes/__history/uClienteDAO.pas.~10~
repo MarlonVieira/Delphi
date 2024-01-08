@@ -1,0 +1,64 @@
+unit uClienteDAO;
+
+interface
+
+uses uCliente, classes, DB, sysUtils, generics.defaults, generics.collections, dialogs, uDm;
+
+type
+  TClienteDAO = class
+    public
+    class function Inserir(tempCliente: TCliente): boolean;
+    class function ListarClientesPorNome(_Nome: string): TObjectList<TCliente>;
+  end;
+
+implementation
+
+var
+  ListaCliente: TObjectList<TCliente>;
+
+{ TClienteDAO }
+
+class function TClienteDAO.Inserir(tempCliente: TCliente): boolean;
+var
+  Sql: string;
+begin
+  try
+    Result := False;
+    Sql := ' INSERT INTO cliente              '+
+           ' ( Nome,                          '+
+           '   Endereco,                      '+
+           '   Numero,                        '+
+           '   CEP,                           '+
+           '   Bairro,                        '+
+           '   IDCidade,                      '+
+           '   UF,                            '+
+           '   Complemento                    '+
+           '  )'+
+           ' VALUES ('+
+               QuotedStr(tempCliente.Nome             )+','+
+               QuotedStr(tempCliente.Endereco         )+','+
+               QuotedStr(tempCliente.Numero           )+','+
+               QuotedStr(tempCliente.CEP              )+','+
+               QuotedStr(tempCliente.Bairro           )+','+
+               IntToStr(tempCliente.Cidade.IDCidade   )+','+
+               QuotedStr(tempCliente.UF               )+','+
+               QuotedStr(tempCliente.Complemento      )+
+            ')';
+
+    Result := DM.FDConnection.ExecSQL(sql) > 0;
+  except
+    on E: Exception do
+    begin
+      Exception.Create('Falha ao Incluir Cliente' + #13 +
+                       'Erro Original: ' + E.Message);
+    end;
+  end;
+end;
+
+class function TClienteDAO.ListarClientesPorNome(
+  _Nome: string): TObjectList<TCliente>;
+begin
+
+end;
+
+end.

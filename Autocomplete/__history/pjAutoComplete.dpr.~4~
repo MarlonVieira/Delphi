@@ -1,0 +1,16 @@
+program pjAutoComplete;
+
+uses
+  Vcl.Forms,
+  uCadastroClientes in 'Autocomplete\view\uCadastroClientes.pas' {Form2},
+  uFrmPrincipal in 'Autocomplete\view\uFrmPrincipal.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

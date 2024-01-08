@@ -1,0 +1,42 @@
+unit uValidaCPF;
+
+interface
+
+type
+  TValidaCPF = class
+    private
+      FRecebeCPF: string;
+      procedure SetRecebeCPF(const Value: string);
+      function GetRecebeCPF: string;
+    function Valida: integer;
+    public
+      property RecebeCPF : string read GetRecebeCPF write SetRecebeCPF;
+      function ValidaCPF1 : integer;
+      function ValidaCPF2 : integer;
+  end;
+
+implementation
+
+{ TValidaCPF }
+
+function TValidaCPF.GetRecebeCPF: string;
+begin
+  Result := FRecebeCPF;
+end;
+
+procedure TValidaCPF.SetRecebeCPF(const Value: string);
+begin
+  FRecebeCPF := Value;
+end;
+
+function TValidaCPF.ValidaCPF1: integer;
+begin
+
+end;
+
+function TValidaCPF.ValidaCPF2: integer;
+begin
+
+end;
+
+end.
