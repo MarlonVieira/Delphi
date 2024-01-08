@@ -1,0 +1,15 @@
+unit Utils;
+
+interface
+
+uses
+  FuncoesData;
+
+type
+  TUtils = class
+    function Funcoes: TFuncoesData
+  end;
+
+implementation
+
+end.

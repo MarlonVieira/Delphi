@@ -1,0 +1,12 @@
+unit Unit2;
+
+interface
+
+type
+  TFuncoesData = class
+    function CalculaIdade(Value: String): Integer;
+  end;
+
+implementation
+
+end.

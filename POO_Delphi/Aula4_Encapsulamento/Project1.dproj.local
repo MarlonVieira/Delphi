@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/21 20:31:42.000.964,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/21 20:32:05.000.305,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:32:46.000.874,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:32:49.000.205,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit1.dfm</Transaction>
+    <Transaction>2022/09/21 20:32:49.000.205,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit1.pas</Transaction>
+    <Transaction>2022/09/21 20:32:51.000.549,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Project1.dproj</Transaction>
+    <Transaction>2022/09/21 20:34:50.000.408,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\FuncoesData.pas</Transaction>
+    <Transaction>2022/09/21 20:35:04.000.261,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:36:35.000.087,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Utils.pas</Transaction>
+    <Transaction>2022/09/21 20:37:25.000.200,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas</Transaction>
+    <Transaction>2022/09/21 20:38:36.000.821,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula4_Encapsulamento\Pessoa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

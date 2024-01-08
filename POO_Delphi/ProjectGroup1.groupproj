@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{99E1959B-0EEA-4D53-A01F-4F2354047781}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Aula1E2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Aula3_Encapsulamento\Aula3_Encapsulamento.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Aula1E2">
+        <MSBuild Projects="Aula1E2.dproj"/>
+    </Target>
+    <Target Name="Aula1E2:Clean">
+        <MSBuild Projects="Aula1E2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Aula1E2:Make">
+        <MSBuild Projects="Aula1E2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Aula3_Encapsulamento">
+        <MSBuild Projects="Aula3_Encapsulamento\Aula3_Encapsulamento.dproj"/>
+    </Target>
+    <Target Name="Aula3_Encapsulamento:Clean">
+        <MSBuild Projects="Aula3_Encapsulamento\Aula3_Encapsulamento.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Aula3_Encapsulamento:Make">
+        <MSBuild Projects="Aula3_Encapsulamento\Aula3_Encapsulamento.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Aula1E2;Aula3_Encapsulamento"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Aula1E2:Clean;Aula3_Encapsulamento:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Aula1E2:Make;Aula3_Encapsulamento:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
