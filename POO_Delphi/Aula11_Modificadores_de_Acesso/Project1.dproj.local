@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/28 20:49:28.000.419,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/28 20:49:53.000.840,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\Unit1.dfm</Transaction>
+    <Transaction>2022/09/28 20:49:53.000.840,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\Unit1.pas</Transaction>
+    <Transaction>2022/09/28 20:49:56.000.293,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\Project1.dproj</Transaction>
+    <Transaction>2022/09/29 20:24:35.000.901,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\ucCliente.pas</Transaction>
+    <Transaction>2022/09/29 20:24:35.000.993,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\ucPessoa.pas</Transaction>
+    <Transaction>2022/09/29 20:29:52.000.251,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\Unit2.pas</Transaction>
+    <Transaction>2022/09/29 20:30:13.000.410,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\ucUsuario.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula8_Polimorfismo_Abstract\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:36:36.000.674,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula10_Construtores_Destrutores\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:37:47.000.423,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula10_Construtores_Destrutores\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula10_Construtores_Destrutores\ucEndereco.pas</Transaction>
+  </Transactions>
+</BorlandProject>
