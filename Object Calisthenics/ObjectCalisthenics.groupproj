@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{836F5C5E-C08C-4F9C-B9E8-768C79E6BFC0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Rule1\Rule1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule2\Rule2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule3\Rule3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule4\Rule4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule5\Rule5.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule6\Rule6.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule7\Rule7.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule8\Rule8.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Rule9\Rule9.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Rule1">
+        <MSBuild Projects="Rule1\Rule1.dproj"/>
+    </Target>
+    <Target Name="Rule1:Clean">
+        <MSBuild Projects="Rule1\Rule1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule1:Make">
+        <MSBuild Projects="Rule1\Rule1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule2">
+        <MSBuild Projects="Rule2\Rule2.dproj"/>
+    </Target>
+    <Target Name="Rule2:Clean">
+        <MSBuild Projects="Rule2\Rule2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule2:Make">
+        <MSBuild Projects="Rule2\Rule2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule3">
+        <MSBuild Projects="Rule3\Rule3.dproj"/>
+    </Target>
+    <Target Name="Rule3:Clean">
+        <MSBuild Projects="Rule3\Rule3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule3:Make">
+        <MSBuild Projects="Rule3\Rule3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule4">
+        <MSBuild Projects="Rule4\Rule4.dproj"/>
+    </Target>
+    <Target Name="Rule4:Clean">
+        <MSBuild Projects="Rule4\Rule4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule4:Make">
+        <MSBuild Projects="Rule4\Rule4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule5">
+        <MSBuild Projects="Rule5\Rule5.dproj"/>
+    </Target>
+    <Target Name="Rule5:Clean">
+        <MSBuild Projects="Rule5\Rule5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule5:Make">
+        <MSBuild Projects="Rule5\Rule5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule6">
+        <MSBuild Projects="Rule6\Rule6.dproj"/>
+    </Target>
+    <Target Name="Rule6:Clean">
+        <MSBuild Projects="Rule6\Rule6.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule6:Make">
+        <MSBuild Projects="Rule6\Rule6.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule7">
+        <MSBuild Projects="Rule7\Rule7.dproj"/>
+    </Target>
+    <Target Name="Rule7:Clean">
+        <MSBuild Projects="Rule7\Rule7.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule7:Make">
+        <MSBuild Projects="Rule7\Rule7.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule8">
+        <MSBuild Projects="Rule8\Rule8.dproj"/>
+    </Target>
+    <Target Name="Rule8:Clean">
+        <MSBuild Projects="Rule8\Rule8.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule8:Make">
+        <MSBuild Projects="Rule8\Rule8.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Rule9">
+        <MSBuild Projects="Rule9\Rule9.dproj"/>
+    </Target>
+    <Target Name="Rule9:Clean">
+        <MSBuild Projects="Rule9\Rule9.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Rule9:Make">
+        <MSBuild Projects="Rule9\Rule9.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Rule1;Rule2;Rule3;Rule4;Rule5;Rule6;Rule7;Rule8;Rule9"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Rule1:Clean;Rule2:Clean;Rule3:Clean;Rule4:Clean;Rule5:Clean;Rule6:Clean;Rule7:Clean;Rule8:Clean;Rule9:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Rule1:Make;Rule2:Make;Rule3:Make;Rule4:Make;Rule5:Make;Rule6:Make;Rule7:Make;Rule8:Make;Rule9:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
