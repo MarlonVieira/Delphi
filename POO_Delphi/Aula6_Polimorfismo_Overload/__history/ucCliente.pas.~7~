@@ -1,0 +1,26 @@
+unit ucCliente;
+
+interface
+
+uses
+  ucPessoa, System.SysUtils;
+
+type
+  TCliente = class(TPessoa)
+    private
+      FCredito: Double;
+    public
+      property Credito: Double read FCredito;
+      function Receber(Valor: Integer): String;
+  end;
+
+implementation
+
+{ TCliente }
+
+function TCliente.Receber(Valor: Integer): String;
+begin
+  Result := Valor.ToString;
+end;
+
+end.

@@ -1,0 +1,25 @@
+unit ucPessoa;
+
+interface
+
+uses
+  Sytem.SysUtils
+
+type
+  TPessoa = class
+    private
+    public
+      Nome: String;
+      function Idade(Value: String): Integer;
+  end;
+
+implementation
+
+{ TPessoa }
+
+function TPessoa.Idade(Value: String): Integer;
+begin
+  result := Trunc((Now - StrToDate(Value)) / 365.25)
+end;
+
+end.

@@ -1,0 +1,55 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, ucPessoa, ucCliente;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function Receber(Valor: Integer): String; overload;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  pessoa: TPessoa;
+  cliente: TCliente;
+begin
+  Memo1.Clear;
+  pessoa := TPessoa.Create;
+  cliente := TCliente.Create;
+  try
+    pessoa.nome := 'Marlon';
+    pessoa.DataNascimento := '20/10/2000';
+    Memo1.Lines.add('Nome:' + pessoa.nome);
+    Memo1.Lines.add('Idade:' +  pessoa.Idade.ToString);
+
+    cliente.Receber(200.30);
+    Memo1.Lines.add('Crédito: ' + cliente.Credito);
+  finally
+    pessoa.Free;
+    cliente.Free;
+  end;
+end;
+
+function TForm1.Receber(Valor: Integer): String;
+begin
+
+end;
+
+end.

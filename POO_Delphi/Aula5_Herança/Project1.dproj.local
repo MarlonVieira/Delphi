@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/26 20:17:09.000.913,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 20:17:49.000.178,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 20:17:49.000.178,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\Unit1.dfm</Transaction>
+    <Transaction>2022/09/26 20:18:10.000.175,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/26 20:18:22.000.747,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\ucPessoa.pas</Transaction>
+    <Transaction>2022/09/26 20:21:40.000.951,C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\Project1.dproj</Transaction>
+    <Transaction>2022/09/26 20:28:48.000.936,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\Unit2.pas</Transaction>
+    <Transaction>2022/09/26 20:29:30.000.472,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\Unit2.pas=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula5_Herança\ucCliente.pas</Transaction>
+  </Transactions>
+</BorlandProject>

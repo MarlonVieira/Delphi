@@ -1,0 +1,13 @@
+unit ucCliente;
+
+interface
+
+uses
+  ucPessoa
+
+type
+  TCliente = class(TPessoa)
+
+implementation
+
+end.
