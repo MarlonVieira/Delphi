@@ -1,0 +1,70 @@
+unit Case1;
+
+interface
+
+type
+  TLogParaEMail = class
+  private
+    FsLog: string;
+
+    procedure PreencherLog;
+    procedure EnviarEmail;
+  public
+    procedure EnviarLog;
+  end;
+
+implementation
+
+uses
+  System.Classes, System.SysUtils, IdSMTP, IdMessage, IdText;
+
+{ TLogToMail }
+
+procedure TLogParaEMail.EnviarLog;
+begin
+  PreencherLog;
+  EnviarEmail;
+end;
+
+procedure TLogParaEMail.PreencherLog;
+var
+  Log: TStringList;
+begin
+  Log := TStringList.Create;
+  try
+    Log.Add('Data/Hora: ' + FormatDateTime('dd/mm/yyyy hh:nn:ss', Now));
+    Log.Add('Versão do Windows: ' + TOSVersion.Name);
+    Log.Add('Última mensagem do Sistema: ' + SysErrorMessage(GetLastError));
+
+    FsLog := Log.Text;
+  finally
+    Log.Free;
+  end;
+end;
+
+procedure TLogParaEMail.EnviarEmail;
+var
+  IdSMTP: TIdSMTP;
+  IdMessage: TIdMessage;
+  IdText: TIdText;
+begin
+  IdSMTP := TIdSMTP.Create(nil);
+  IdMessage := TIdMessage.Create(nil);
+  try
+    { ... }
+
+    IdText := TIdText.Create(IdMessage.MessageParts);
+    // usa o texto de log criado no método anterior
+    IdText.Body.Add(FsLog);
+
+    IdSMTP.Connect;
+    IdSMTP.Authenticate;
+    IdSMTP.Send(IdMessage);
+  finally
+    IdSMTP.Disconnect;
+    IdMessage.Free;
+    IdSMTP.Free;
+  end;
+end;
+
+end.
