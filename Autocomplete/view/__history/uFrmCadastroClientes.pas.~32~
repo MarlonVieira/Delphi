@@ -1,0 +1,170 @@
+unit uFrmCadastroClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.ExtCtrls, uClienteDAO,
+  Vcl.StdCtrls, Vcl.ComCtrls, Vcl.Mask, uCidade, uCidadeDAO,
+  System.Generics.Collections, uCliente, StrUtils, uClienteValidador, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TfrmCadastroClientes = class(TForm)
+    gbDadosPesooais: TGroupBox;
+    gbEndereco: TGroupBox;
+    Panel1: TPanel;
+    btGravar: TButton;
+    btCancelar: TButton;
+    lbNome: TLabeledEdit;
+    lbEndereco: TLabeledEdit;
+    lbNumero: TLabeledEdit;
+    lbBairro: TLabeledEdit;
+    mlbCEP: TMaskEdit;
+    Label1: TLabel;
+    lbComplemento: TLabeledEdit;
+    cbUF: TComboBox;
+    Label2: TLabel;
+    lbCidade: TLabeledEdit;
+    ListViewCidades: TListView;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure cbUFChange(Sender: TObject);
+    procedure lbCidadeKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure ListViewCidadesDblClick(Sender: TObject);
+    procedure ListViewCidadesKeyPress(Sender: TObject; var Key: Char);
+    procedure btCancelarClick(Sender: TObject);
+    procedure btGravarClick(Sender: TObject);
+  private
+    { Private declarations }
+    Cliente: TCliente;
+    _ListaCidades: TObjectList<TCidade>;
+    _ListaCidadesFiltradas: TObjectList<TCidade>;
+    procedure PreencherDados;
+    procedure CarregarCidades(_UF: string);
+    procedure LocalizarCidadeLista(_Cidade: string);
+    procedure SelecionaItemListView;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroClientes: TfrmCadastroClientes;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmCadastroClientes }
+
+procedure TfrmCadastroClientes.btCancelarClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmCadastroClientes.btGravarClick(Sender: TObject);
+var
+  tempResultadoClienteValidador: TStringList;
+begin
+  try
+    PreencherDados;
+    tempResultadoClienteValidador := TClienteValidador.Validar(Cliente);
+    if tempResultadoClienteValidador.Count = 0 then
+    begin
+      if TClienteDAO.Inserir(Cliente) then
+      begin
+        MessageDlg('Cliente cadastrado com SUCESSO!', mtConfirmation,[mbOK],0);
+        Close;
+      end;
+    end
+    else
+      MessageDlg('A T E N Ç Ã O !' + #13 +
+                 tempResultadoClienteValidador.Text ,mtError,[mbOK],0);
+  finally
+    if Assigned(tempResultadoClienteValidador) then
+      FreeAndNil(tempResultadoClienteValidador);
+  end;
+end;
+
+procedure TfrmCadastroClientes.CarregarCidades(_UF: string);
+begin
+  _ListaCidades := TCidadeDAO.ListarTodasCidadeUF(_UF);
+end;
+
+procedure TfrmCadastroClientes.cbUFChange(Sender: TObject);
+begin
+  lbCidade.Clear;
+  ListViewCidades.Visible := False;
+
+  CarregarCidades(cbUF.Text);
+end;
+
+procedure TfrmCadastroClientes.FormCreate(Sender: TObject);
+begin
+  _ListaCidadesFiltradas := TObjectList<TCidade>.Create;
+  Cliente                := TCliente.Create;
+end;
+
+procedure TfrmCadastroClientes.FormDestroy(Sender: TObject);
+begin
+  if Assigned(_ListaCidadesFiltradas) then
+    FreeAndNil(_ListaCidadesFiltradas);
+
+  if Assigned(Cliente) then
+    FreeAndNil(Cliente);
+end;
+
+procedure TfrmCadastroClientes.lbCidadeKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if lbCidade.Text = '' then
+    exit
+  else
+    LocalizarCidadeLista(lbCidade.Text);
+end;
+
+procedure TfrmCadastroClientes.ListViewCidadesDblClick(Sender: TObject);
+begin
+  SelecionaItemListView;
+end;
+
+procedure TfrmCadastroClientes.ListViewCidadesKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    if ListViewCidades.ItemIndex > -1 then
+    begin
+      SelecionaItemListView;
+    end;
+  end;
+end;
+
+procedure TfrmCadastroClientes.LocalizarCidadeLista(_Cidade: string);
+begin
+
+end;
+
+procedure TfrmCadastroClientes.PreencherDados;
+begin
+  Cliente.Nome        := lbNome.Text;
+  Cliente.Endereco    := lbEndereco.Text;
+  Cliente.Numero      := lbNumero.Text;
+  Cliente.Complemento := lbComplemento.Text;
+  Cliente.CEP         := mlbCEP.Text;
+  Cliente.Bairro      := lbBairro.Text;
+  Cliente.UF          := cbUF.Text;
+end;
+
+procedure TfrmCadastroClientes.SelecionaItemListView;
+begin
+  if ListViewCidades.ItemIndex > -1 then
+  begin
+    Cliente.Cidade.IdCidade := TCidade(ListViewCidades.ItemFocused.Data).IdCidade;
+    Cliente.Cidade.Nome     := TCidade(ListViewCidades.ItemFocused.Data).Nome;
+    lbCidade.Text           := Cliente.Cidade.Nome;
+    ListViewCidades.Visible := False;
+  end;
+end;
+
+end.
