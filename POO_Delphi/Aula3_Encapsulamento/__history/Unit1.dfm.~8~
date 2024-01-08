@@ -1,0 +1,42 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 299
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object EB_DEPOSITAR: TButton
+    Left = 296
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'Depositar'
+    TabOrder = 0
+    OnClick = EB_DEPOSITARClick
+  end
+  object EB_VALOR: TLabeledEdit
+    Left = 152
+    Top = 106
+    Width = 121
+    Height = 21
+    EditLabel.Width = 51
+    EditLabel.Height = 13
+    EditLabel.Caption = 'EB_VALOR'
+    TabOrder = 1
+  end
+  object memo: TMemo
+    Left = 186
+    Top = 152
+    Width = 185
+    Height = 89
+    TabOrder = 2
+  end
+end
