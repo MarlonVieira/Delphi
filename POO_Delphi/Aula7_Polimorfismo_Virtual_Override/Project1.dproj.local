@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/09/28 19:58:45.358,=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/28 19:59:21.611,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula7_Polimorfismo_Virtual_Override\Unit1.pas=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/28 19:59:21.611,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula7_Polimorfismo_Virtual_Override\Unit1.dfm=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/28 19:59:26.057,C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula7_Polimorfismo_Virtual_Override\Project1.dproj=C:\Users\zirok\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/28 20:16:47.228,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula7_Polimorfismo_Virtual_Override\ucCliente.pas</Transaction>
+    <Transaction>2022/09/28 20:16:47.301,=C:\Users\zirok\OneDrive\Área de Trabalho\POO_Delphi\Aula7_Polimorfismo_Virtual_Override\ucPessoa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

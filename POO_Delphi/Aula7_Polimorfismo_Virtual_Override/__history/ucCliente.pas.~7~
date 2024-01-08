@@ -1,0 +1,23 @@
+unit ucCliente;
+
+interface
+
+uses
+  ucPessoa, System.SysUtils;
+
+type
+  TCliente = class(TPessoa)
+    private
+      FCPF: String;
+    public
+      property CPF: String read FCPF write FCPF;
+
+  end;
+
+implementation
+
+{ TCliente }
+
+
+
+end.

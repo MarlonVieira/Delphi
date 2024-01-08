@@ -1,0 +1,30 @@
+unit ucCliente;
+
+interface
+
+uses
+  ucPessoa, System.SysUtils;
+
+type
+  TCliente = class(TPessoa)
+    private
+      FCPF: String;
+    public
+      property CPF: String read FCPF write FCPF;
+      function RetornaDados: String; virtual;
+  end;
+
+implementation
+
+{ TCliente }
+
+
+
+{ TCliente }
+
+function TCliente.RetornaDados: String;
+begin
+  Result :=
+end;
+
+end.
